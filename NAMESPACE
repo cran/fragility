@@ -1,0 +1,20 @@
+export(frag.ma, frag.ma.alpha, frag.mas, frag.nma, frag.nma.alpha, frag.studies, frag.study.alpha, frag.study)
+
+import(metafor, netmeta, graphics, grDevices, stats)
+importFrom(plotrix, axis.break)
+
+S3method(plot, frag.alpha)
+S3method(plot, frag.ma)
+S3method(plot, frag.multi)
+S3method(plot, frag.nma)
+S3method(plot, frag.study.all)
+S3method(print, frag.ma)
+S3method(print, frag.ma.alpha)
+S3method(print, frag.mas)
+S3method(print, frag.nma)
+S3method(print, frag.nma.alpha)
+S3method(print, frag.studies)
+S3method(print, frag.study.alpha)
+S3method(print, frag.study)
+
+
