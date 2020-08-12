@@ -41,7 +41,7 @@ A bar plot or a histogram is generated. In the bar plot, the x axis presents the
 None.
 }
 \references{
-Lin L. "Factors that impact fragility index and their visualizations." Unpublished manuscript.
+Lin L. "Factors that impact fragility index and their visualizations." \emph{Journal of Evaluation in Clinical Practice}, in press. <\doi{10.1111/jep.13428}>
 }
 %%\author{
 %%  ~~who you are~~

@@ -62,7 +62,7 @@ frag.nma(sid, tid, e, n, data, measure = "OR", random = TRUE, alpha = 0.05,
 \references{
 Schwarzer G, Carpenter JR, Rucker G (2015). \emph{Meta-Analysis with R}. Cham, Switzerland: Springer. <\doi{10.1007/978-3-319-21416-0}>
 
-Xing A, Chu H, Lin L. "Fragility index of network meta-analysis with application to smoking cessation data." Unpublished manuscript.
+Xing A, Chu H, Lin L. "Fragility index of network meta-analysis with application to smoking cessation data." \emph{Journal of Clinical Epidemiology}, \bold{127}, 29--39. <\doi{10.1016/j.jclinepi.2020.07.003}>
 }
 %%\author{
 %%  ~~who you are~~

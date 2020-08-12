@@ -1,4 +1,4 @@
-fd604f85c7b8f831ac9bf6f9f83735cf *DESCRIPTION
+cec7f7e2fd483c6309562cb03753d7c8 *DESCRIPTION
 eda17e85db6f9147ed9af41c4fd6f295 *NAMESPACE
 c3f15a012de77694d60639c80b9ee32a *R/frag.ma.R
 de90c167ed5992706f0e21282c694d1a *R/frag.ma.alpha.R
@@ -26,7 +26,7 @@ c0569affd833cff44b52c508cbe9ed3b *R/print.frag.study.alpha.R
 ad6e2592af18a8296de57a68a09f0337 *R/pval.RD.R
 b7792fddb9503840e499d0ea2f4043d2 *R/pval.logOR.R
 c2b1cec1d8d054aef58c9f3144645929 *R/pval.logRR.R
-e0d636c3c6df8795ca3ca2eaf7f8ceb0 *build/partial.rdb
+0476d15ba8c35cc3fd18872685fb3f1b *build/partial.rdb
 b4a6474faffec02dd7e959576edd4662 *data/dat.ad.rda
 91dc5af53ea9f0eeadded171b38b8a87 *data/dat.copd.rda
 b0a765946f6e9ed1fb73dd83b45eecdc *data/dat.ns.rda
@@ -38,16 +38,16 @@ d3a91d9373715d73a904f81696b13980 *man/dat.sc.Rd
 2a6c592d151fddcdd9476999d918aa3f *man/frag.ma.Rd
 c852e0618d8e705195d5016d5e052c20 *man/frag.ma.alpha.Rd
 c16dc6b3e892ea3184db24178ae5c7b2 *man/frag.mas.Rd
-42b1b9d2696c82ef5ebb340c2ab4e2e8 *man/frag.nma.Rd
+9c05fa08fe460c2b3aeb84e0599429ea *man/frag.nma.Rd
 c57fc4d58a26bd7b16829431b54049b2 *man/frag.nma.alpha.Rd
 ecbc6b97c5d1213b8dd5521be2c79a35 *man/frag.studies.Rd
 c5af1d5bc0bbae101703f2c477fedf86 *man/frag.study.Rd
 d24f48a21f4fe9fb490baa3495158213 *man/frag.study.alpha.Rd
-b5c1e9f8c1a4509adfe9127d301c2480 *man/plot.frag.alpha.Rd
+24a12275d6fb2da4981564b26ab0681e *man/plot.frag.alpha.Rd
 6f9036503a838bc6fb56bd6525fe4c70 *man/plot.frag.ma.Rd
-4dca326ba9d40cbc9c1ab4db377c9c82 *man/plot.frag.multi.Rd
+a30b7b6f8233e7a2f736404c05fe30d3 *man/plot.frag.multi.Rd
 2a4d7ef8b65c7941bd377fcc7648e023 *man/plot.frag.nma.Rd
-757c62bcde4f7571078ecb1d22d868f9 *man/plot.frag.study.all.Rd
+e6c4d92ca9f871fa2b503e5946671f69 *man/plot.frag.study.all.Rd
 a6b3671149c7582bd7c03c1a4ad83ed9 *man/print.frag.ma.Rd
 7f7806a6fe0c0db32f1eb102ce793741 *man/print.frag.ma.alpha.Rd
 4d437600cadedf066c53b0c02c0a2914 *man/print.frag.mas.Rd
