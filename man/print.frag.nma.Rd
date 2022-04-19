@@ -14,7 +14,7 @@ Prints information about the fragility of a network meta-analysis with a binary 
   \item{\dots}{other arguments.}
 }
 \details{
-  Due to space limit, the output only includes the basic characteristics of the network meta-analysis (the numbers of studies and treatments), the effect size, and the brief information about fragility index and quotient. More information can be retrieved from the list object \code{x}. For example, the estimated effect sizes can be retrieved from \code{x$est.ori}, and the directions of significance change corresponding to the fragility index/quotient can be retrieved from \code{x$dir}.
+  Due to the space limit, the output only includes the basic characteristics of the network meta-analysis (the numbers of studies and treatments), the effect size, and the brief information about fragility index and quotient. More information can be retrieved from the list object \code{x}. For example, the estimated effect sizes can be retrieved from \code{x$est.ori}, and the directions of significance change corresponding to the fragility index/quotient can be retrieved from \code{x$dir}.
 }
 \value{
 None.

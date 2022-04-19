@@ -14,7 +14,7 @@ Prints information about the fragility of multiple meta-analyses with binary out
   \item{\dots}{other arguments.}
 }
 \details{
-  The output includes the number of meta-analyses, the pre-specified significance level, the null value of effect size, and the descriptive information about the fragility of the multiple meta-analyses, such as the median, range (from minimum to maximum), and interquartile range (IQR, from first quartile to third quartile) of fragility index and those of fragility quotient.
+  The output includes the number of meta-analyses, the pre-specified significance level, the null value of effect size, and the descriptive information about the fragility of the multiple meta-analyses, such as the median, range (from minimum to maximum), and interquartile range (IQR, from the first quartile to the third quartile) of fragility index and those of fragility quotient.
 }
 \value{
 None.

@@ -41,10 +41,10 @@ frag.nma(sid, tid, e, n, data, measure = "OR", random = TRUE, alpha = 0.05,
   \item{measure}{measure of treatment effect (i.e., effect size).}
   \item{alpha}{pre-specified statistical significance level.}
   \item{null}{value of odds ratio, relative risk, or risk difference (specified by \code{measure}) under the null hypothesis. Note that odds ratio and relative risk are presented on a natural logarithmic scale in all output values.}
-  \item{est.ori}{a matrix containing the point estimate of the overall effect size for each pair of treatment comparison based on the original network meta-analysis. Each element presents the treatment corresponding to the row compared with the treatment corresponding to the column; the similar interpretation applies to other outputs in the form of matrix.}
-  \item{ci.lb.ori}{the lower bound of the confidence interval of the overall effect size for each pair of treatment comparison based on the original network meta-analysis.}
-  \item{ci.lb.ori}{the upper bound of the confidence interval of the overall effect size for each pair of treatment comparison based on the original network meta-analysis.}
-  \item{pval.ori}{the p-value of the overall effect size for each pair of treatment comparison based on the original network meta-analysis.}
+  \item{est.ori}{a matrix containing the point estimate of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis. Each element presents the treatment corresponding to the row compared with the treatment corresponding to the column; a similar interpretation applies to other outputs in the form of a matrix.}
+  \item{ci.lb.ori}{the lower bound of the confidence interval of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis.}
+  \item{ci.lb.ori}{the upper bound of the confidence interval of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis.}
+  \item{pval.ori}{the p-value of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis.}
   \item{mod.dir}{the direction of the confidence interval change due to event status modifications when the original confidence interval covers the null value (i.e., non-significance altered to significance).}
   \item{tid.f}{treatment comparisons whose fragility is assessed.}
   \item{FI}{fragility index.}
@@ -62,13 +62,13 @@ frag.nma(sid, tid, e, n, data, measure = "OR", random = TRUE, alpha = 0.05,
 \references{
 Schwarzer G, Carpenter JR, Rucker G (2015). \emph{Meta-Analysis with R}. Cham, Switzerland: Springer. <\doi{10.1007/978-3-319-21416-0}>
 
-Xing A, Chu H, Lin L. "Fragility index of network meta-analysis with application to smoking cessation data." \emph{Journal of Clinical Epidemiology}, \bold{127}, 29--39. <\doi{10.1016/j.jclinepi.2020.07.003}>
+Xing A, Chu H, Lin L (2020). "Fragility index of network meta-analysis with application to smoking cessation data." \emph{Journal of Clinical Epidemiology}, \bold{127}, 29--39. <\doi{10.1016/j.jclinepi.2020.07.003}>
 }
 %%\author{
 %%  ~~who you are~~
 %%}
 \note{
-When the network meta-analysis contains many studies and many treatments, the assess of fragility may be very computationally demanding. In such cases, one may focus on certain treatment comparisons that are of primary interest by specifying the arguments \code{tid1.f} and \code{tid2.f}. Also, if the significance or non-significance cannot be altered based on the given range of event status modifications, the fragility index are fragility quotient are defined to be \code{NA} (not available).
+When the network meta-analysis contains many studies and many treatments, the assessment of fragility may be very computationally demanding. In such cases, one may focus on certain treatment comparisons that are of primary interest by specifying the arguments \code{tid1.f} and \code{tid2.f}. Also, if the significance or non-significance cannot be altered based on the given range of event status modifications, the fragility index and fragility quotient are defined to be \code{NA} (not available).
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

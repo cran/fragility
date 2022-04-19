@@ -75,7 +75,7 @@ data(dat.ad)
 out1 <- frag.study.alpha(e0, n0, e1, n1, data = dat.ad[13,])
 out1
 
-## Generate plot to show the change of fragility measure,
+## Generate plots to show the change of fragility measure,
 ##  where the default plot is for the first method
 ##  (i.e., Fisher's exact test) if the argument method is not specified
 plot(out1)

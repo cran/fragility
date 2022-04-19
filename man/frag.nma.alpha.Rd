@@ -44,9 +44,9 @@ frag.nma.alpha(sid, tid, e, n, data, measure = "OR", random = TRUE,
   \item{measure}{measure of treatment effect (i.e., effect size).}
   \item{alphas}{different statistical significance levels.}
   \item{null}{value of odds ratio, relative risk, or risk difference (specified by \code{measure}) under the null hypothesis. Note that odds ratio and relative risk are presented on a natural logarithmic scale in all output values.}
-  \item{est.ori}{a matrix containing the point estimate of the overall effect size for each pair of treatment comparison based on the original network meta-analysis. Each element presents the treatment corresponding to the row compared with the treatment corresponding to the column; the similar interpretation applies to other outputs in the form of matrix.}
-  \item{se.ori}{a matrix containing the standard error of the overall effect size for each pair of treatment comparison based on the original network meta-analysis.}
-  \item{pval.ori}{the p-value of the overall effect size for each pair of treatment comparison based on the original network meta-analysis.}
+  \item{est.ori}{a matrix containing the point estimate of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis. Each element presents the treatment corresponding to the row compared with the treatment corresponding to the column; a similar interpretation applies to other outputs in the form of a matrix.}
+  \item{se.ori}{a matrix containing the standard error of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis.}
+  \item{pval.ori}{the p-value of the overall effect size for each pair of treatment comparisons based on the original network meta-analysis.}
   \item{mod.dir}{the direction of the confidence interval change due to event status modifications when the original confidence interval covers the null value (i.e., non-significance altered to significance).}
   \item{tid.f}{treatment comparisons whose fragility is assessed.}
   \item{FI}{fragility indexes at different statistical significance levels in \code{alphas}.}
@@ -65,7 +65,7 @@ Ioannidis JPA (2018). "The proposal to lower P value thresholds to .005." \emph{
 %%  ~~who you are~~
 %%}
 \note{
-When the network meta-analysis contains many studies and many treatments, the assess of fragility may be very computationally demanding. In such cases, one may focus on certain treatment comparisons that are of primary interest by specifying the arguments \code{tid1.f} and \code{tid2.f}.
+When the network meta-analysis contains many studies and many treatments, the assessment of fragility may be very computationally demanding. In such cases, one may focus on certain treatment comparisons that are of primary interest by specifying the arguments \code{tid1.f} and \code{tid2.f}.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

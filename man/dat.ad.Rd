@@ -18,7 +18,7 @@ An illustrative example of clinical studies with binary outcomes.
   }
 }
 \details{
-The binary outcome is acceptability (dropout due to any cause). The 347 trials are selected from Cipriani el al.\sspace(2018) after excluding trials with missing data or with more than two treatment arms.
+The binary outcome is acceptability (dropout due to any cause). The 347 trials are selected from Cipriani et al.\sspace(2018) after excluding trials with missing data or with more than two treatment arms.
 }
 \source{
 Cipriani A, Furukawa TA, Salanti G, Chaimani A, Atkinson LZ, Ogawa Y, Leucht S, Ruhe HG, Turner EH, Higgins JPT, Egger M, Takeshima N, Hayasaka Y, Imai H, Shinohara K, Tajika A, Ioannidis JPA, Geddes JR (2018). "Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis." \emph{Lancet}, \bold{391}(10128), 1357--66. <\doi{10.1016/S0140-6736(17)32802-7}>

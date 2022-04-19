@@ -41,7 +41,7 @@ A scatter plot is generated, where the x axis presents the different significanc
 None.
 }
 \references{
-Lin L. "Factors that impact fragility index and their visualizations." \emph{Journal of Evaluation in Clinical Practice}, in press. <\doi{10.1111/jep.13428}>
+Lin L (2021). "Factors that impact fragility index and their visualizations." \emph{Journal of Evaluation in Clinical Practice}, \bold{27}(2), 356--64. <\doi{10.1111/jep.13428}>
 }
 %%\author{
 %%  ~~who you are~~

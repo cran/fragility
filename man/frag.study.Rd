@@ -68,7 +68,7 @@ Walsh M, Srinathan SK, McAuley DF, Mrkobrada M, Levine O, Ribic C, Molnar AO, Da
 %%  ~~who you are~~
 %%}
 \note{
-  If the significance or non-significance cannot be altered based on the given range of event status modifications, the fragility index are fragility quotient are defined to be \code{NA} (not available).
+  If the significance or non-significance cannot be altered based on the given range of event status modifications, the fragility index and fragility quotient are defined to be \code{NA} (not available).
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
