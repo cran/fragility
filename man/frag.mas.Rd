@@ -45,6 +45,8 @@ frag.mas(e0, n0, e1, n1, ma.id, data, measure = "OR", alpha = 0.05,
 }
 \references{
 Atal I, Porcher R, Boutron I, Ravaud P (2019). "The statistical significance of meta-analyses is frequently fragile: definition of a fragility index for meta-analyses." \emph{Journal of Clinical Epidemiology}, \bold{111}, 32--40. <\doi{10.1016/j.jclinepi.2019.03.012}>
+
+Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
 }
 %%\author{
 %%  ~~who you are~~

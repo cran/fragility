@@ -62,6 +62,8 @@ frag.nma(sid, tid, e, n, data, measure = "OR", random = TRUE, alpha = 0.05,
 \references{
 Schwarzer G, Carpenter JR, Rucker G (2015). \emph{Meta-Analysis with R}. Cham, Switzerland: Springer. <\doi{10.1007/978-3-319-21416-0}>
 
+Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
+
 Xing A, Chu H, Lin L (2020). "Fragility index of network meta-analysis with application to smoking cessation data." \emph{Journal of Clinical Epidemiology}, \bold{127}, 29--39. <\doi{10.1016/j.jclinepi.2020.07.003}>
 }
 %%\author{

@@ -43,6 +43,8 @@ frag.studies(e0, n0, e1, n1, data, methods,
   Of note, if both arguments \code{modify0} and \code{modify0} are \code{"none"} (i.e., no modification), the items \code{FI} and \code{FQ} in the above list are not produced, because fragility cannot be assessed without event status modifications.
 }
 \references{
+Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
+
 Walsh M, Srinathan SK, McAuley DF, Mrkobrada M, Levine O, Ribic C, Molnar AO, Dattani ND, Burke A, Guyatt G, Thabane L, Walter SD, Pogue J, Devereaux PJ (2014). "The statistical significance of randomized controlled trial results is frequently fragile: a case for a Fragility Index." \emph{Journal of Clinical Epidemiology}, \bold{67}(6), 622--8. <\doi{10.1016/j.jclinepi.2013.10.019}>
 }
 %%\author{

@@ -49,7 +49,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
   pmeta.ori <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = ori.data, sm = measure,
     incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
   rslt.ori <- netmeta(TE = pmeta.ori$TE, seTE = pmeta.ori$seTE, treat1 = pmeta.ori$treat1, treat2 = pmeta.ori$treat2, studlab = pmeta.ori$studlab,
-    sm = measure, level.comb = 1 - alpha, ...)
+    sm = measure, level.ma = 1 - alpha, ...)
   est.ori <- rslt.ori[[paste0("TE.", model)]]
   ci.lb.ori <- rslt.ori[[paste0("lower.", model)]]
   ci.ub.ori <- rslt.ori[[paste0("upper.", model)]]
@@ -181,7 +181,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
           pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
             incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
           out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
-            sm = measure, level.comb = 1 - alpha, ...)
+            sm = measure, level.ma = 1 - alpha, ...)
           sid.temp <- c(sid.temp, sids.temp[i])
           est.temp <- c(est.temp, out.temp[[paste0("TE.", model)]][tid1, tid2])
           ci.lb.temp <- c(ci.lb.temp, out.temp[[paste0("lower.", model)]][tid1, tid2])
@@ -261,7 +261,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
             pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
               incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
             out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
-              sm = measure, level.comb = 1 - alpha, ...)
+              sm = measure, level.ma = 1 - alpha, ...)
             sid.temp <- c(sid.temp, sids.temp[i])
             est.temp <- c(est.temp, out.temp[[paste0("TE.", model)]][tid1, tid2])
             ci.lb.temp <- c(ci.lb.temp, out.temp[[paste0("lower.", model)]][tid1, tid2])
@@ -336,7 +336,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
             pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
               incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
             out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
-              sm = measure, level.comb = 1 - alpha, ...)
+              sm = measure, level.ma = 1 - alpha, ...)
             sid.temp <- c(sid.temp, sids.temp[i])
             est.temp <- c(est.temp, out.temp[[paste0("TE.", model)]][tid1, tid2])
             ci.lb.temp <- c(ci.lb.temp, out.temp[[paste0("lower.", model)]][tid1, tid2])

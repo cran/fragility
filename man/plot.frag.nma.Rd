@@ -37,9 +37,9 @@ A plot showing the iterative process of event status modifications is generated 
 \value{
 None.
 }
-%%\references{
-%% ~put references to the literature/web site here ~
-%%}
+\references{
+Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
+}
 %%\author{
 %%  ~~who you are~~
 %%}

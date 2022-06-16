@@ -51,6 +51,8 @@ None.
 }
 \references{
 Lin L (2021). "Factors that impact fragility index and their visualizations." \emph{Journal of Evaluation in Clinical Practice}, \bold{27}(2), 356--64. <\doi{10.1111/jep.13428}>
+
+Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
 }
 %%\author{
 %%  ~~who you are~~
