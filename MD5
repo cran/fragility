@@ -1,4 +1,4 @@
-045e67f7d7efb250592ede0b52c69d82 *DESCRIPTION
+5169c2bb425330e3b43831ea3d6d160a *DESCRIPTION
 eda17e85db6f9147ed9af41c4fd6f295 *NAMESPACE
 c3f15a012de77694d60639c80b9ee32a *R/frag.ma.R
 de90c167ed5992706f0e21282c694d1a *R/frag.ma.alpha.R
@@ -26,7 +26,7 @@ c0569affd833cff44b52c508cbe9ed3b *R/print.frag.study.alpha.R
 ad6e2592af18a8296de57a68a09f0337 *R/pval.RD.R
 b7792fddb9503840e499d0ea2f4043d2 *R/pval.logOR.R
 c2b1cec1d8d054aef58c9f3144645929 *R/pval.logRR.R
-a97b93d4932b6700d41084b2ea32758f *build/partial.rdb
+0a8bea53723045bdc5c80ff9a438a0d4 *build/partial.rdb
 b4a6474faffec02dd7e959576edd4662 *data/dat.ad.rda
 91dc5af53ea9f0eeadded171b38b8a87 *data/dat.copd.rda
 b0a765946f6e9ed1fb73dd83b45eecdc *data/dat.ns.rda
