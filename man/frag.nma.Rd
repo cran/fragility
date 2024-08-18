@@ -64,6 +64,8 @@ Schwarzer G, Carpenter JR, Rucker G (2015). \emph{Meta-Analysis with R}. Cham, S
 
 Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
 
+Lin L, Xing A, Chu H, Murad MH, Xu C, Baer BR, Wells MT, Sanchez-Ramos L (2023). "Assessing the robustness of results from clinical trials and meta-analyses with the fragility index." \emph{American Journal of Obstetrics and Gynecology}, \bold{228}(3), 276--282. <\doi{10.1016/j.ajog.2022.08.053}>
+
 Xing A, Chu H, Lin L (2020). "Fragility index of network meta-analysis with application to smoking cessation data." \emph{Journal of Clinical Epidemiology}, \bold{127}, 29--39. <\doi{10.1016/j.jclinepi.2020.07.003}>
 }
 %%\author{

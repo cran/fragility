@@ -1,6 +1,6 @@
 frag.mas <- function(e0, n0, e1, n1, ma.id, data, measure = "OR",
   alpha = 0.05, mod.dir = "both", OR = 1, RR = 1, RD = 0,
-  method = "DL", test = "z", ...){
+  method = "DL", test = "z", drop00 = FALSE, ...){
   if(!missing(data)){
     e0 <- eval(substitute(e0), data, parent.frame())
     n0 <- eval(substitute(n0), data, parent.frame())
@@ -63,7 +63,7 @@ frag.mas <- function(e0, n0, e1, n1, ma.id, data, measure = "OR",
     temp.n1 <- n1[ma.id == ma.ids[i]]
     temp.out <- frag.ma(e0 = temp.e0, n0 = temp.n0, e1 = temp.e1, n1 = temp.n1,
       measure = measure, alpha = alpha, mod.dir = mod.dir, OR = OR, RR = RR, RD = RD,
-      method = method, test = test, ...)
+      method = method, test = test, drop00 = drop00, ...)
     est.ori[i] <- temp.out$est.ori
     ci.ori[i,] <- temp.out$ci.ori
     pval.ori[i] <- temp.out$pval

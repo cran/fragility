@@ -9,7 +9,7 @@ Produces results, such as fragility index, fragility quotient, and event status 
 \usage{
 frag.ma(e0, n0, e1, n1, data, measure = "OR", alpha = 0.05,
         mod.dir = "both", OR = 1, RR = 1, RD = 0,
-        method = "DL", test = "z", ...)
+        method = "DL", test = "z", drop00 = FALSE, ...)
 }
 \arguments{
   \item{e0}{a numeric vector or the corresponding column name in the argument \code{data}, indicating event counts in group 0 among the studies in the meta-analysis.}
@@ -25,6 +25,7 @@ frag.ma(e0, n0, e1, n1, data, measure = "OR", alpha = 0.05,
   \item{RD}{a numeric value between \eqn{-}1 indicating the value of risk difference under the null hypothesis (the default is 0). It is used only if the argument \code{measure} is \code{"RD"}.}
   \item{method}{a character string specifying the method for performing meta-analysis. It is passed to \code{\link[metafor]{rma.uni}}. Options include the fixed-effect model by specifying \code{"FE"} and the random-effects model by specifying \code{"DL"} (DerSimonian--Laird estimator), \code{"HE"} (Hedges estimator), \code{"HS"} (Hunter--Schmidt estimator), \code{"SJ"} (Sidik--Jonkman estimator), \code{"ML"} (maximum likelihood estimator), \code{"REML"} (restricted maximum likelihood estimator), \code{"EB"} (empirical Bayes estimator), \code{"PM"} (Paule--Mandel estimator), or \code{"GENQ"} (generalized \eqn{W}-statistic estimator) for different methods to estimate the heterogeneity variance. See details in the manual of the package \CRANpkg{metafor}.}
   \item{test}{a character string specifying how confidence intervals are derived. It is passed to \code{\link[metafor]{rma.uni}}. Options include \code{"z"}, \code{"t"}, \code{"knha"} (Hartung--Knapp--Sidik--Jonkman method), and \code{"adhoc"}; the first indicates Wald-type confidence intervals based on the standard normal distribution (the default), while the latter three yield confidence intervals based on the t-distribution. See details in the manual of the package \CRANpkg{metafor}.}
+  \item{drop00}{a logical value indicating whether studies with no events (or only events) in both groups should be dropped when calculating the observed effect sizes or outcomes. It is passed to \code{\link[metafor]{rma.uni}}.}
   \item{\dots}{other arguments that can be passed to \code{\link[metafor]{rma.uni}}. See details in the manual of the package \CRANpkg{metafor}.}
 }
 %%\details{
@@ -54,6 +55,8 @@ frag.ma(e0, n0, e1, n1, data, measure = "OR", alpha = 0.05,
 Atal I, Porcher R, Boutron I, Ravaud P (2019). "The statistical significance of meta-analyses is frequently fragile: definition of a fragility index for meta-analyses." \emph{Journal of Clinical Epidemiology}, \bold{111}, 32--40. <\doi{10.1016/j.jclinepi.2019.03.012}>
 
 Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
+
+Lin L, Xing A, Chu H, Murad MH, Xu C, Baer BR, Wells MT, Sanchez-Ramos L (2023). "Assessing the robustness of results from clinical trials and meta-analyses with the fragility index." \emph{American Journal of Obstetrics and Gynecology}, \bold{228}(3), 276--282. <\doi{10.1016/j.ajog.2022.08.053}>
 }
 %%\author{
 %%  ~~who you are~~

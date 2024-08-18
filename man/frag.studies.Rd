@@ -74,14 +74,14 @@ plot(out1)
 plot(out1, cex.name = 0.7, mgp = c(2, 0.5, 0),
   main = "Bar plot of fragility index")
 
-## Reverse the bars representing two directions of significance change
+## Reverse the bars that represent two directions of significance change
 plot(out1, reverse = TRUE)
 
 ## Add space between bars, suppress borders, and change colors of bars
 plot(out1, space = 0.5, col.border = NA, col.sig = c("blue", "red"),
   cex.name = 0.7, mgp = c(2, 0.5, 0))
 ## More options, such as legends, can be added to the plot
-legend("toprigh", fill = c("blue", "red"), border = NA,
+legend("topright", fill = c("blue", "red"), border = NA,
   legend = c("Non-significance altered to significance",
   "Significance altered to non-significance"))
 

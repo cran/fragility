@@ -64,6 +64,8 @@ frag.study(e0, n0, e1, n1, data, all = FALSE, methods,
 \references{
 Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
 
+Lin L, Xing A, Chu H, Murad MH, Xu C, Baer BR, Wells MT, Sanchez-Ramos L (2023). "Assessing the robustness of results from clinical trials and meta-analyses with the fragility index." \emph{American Journal of Obstetrics and Gynecology}, \bold{228}(3), 276--282. <\doi{10.1016/j.ajog.2022.08.053}>
+
 Walsh M, Srinathan SK, McAuley DF, Mrkobrada M, Levine O, Ribic C, Molnar AO, Dattani ND, Burke A, Guyatt G, Thabane L, Walter SD, Pogue J, Devereaux PJ (2014). "The statistical significance of randomized controlled trial results is frequently fragile: a case for a Fragility Index." \emph{Journal of Clinical Epidemiology}, \bold{67}(6), 622--8. <\doi{10.1016/j.jclinepi.2013.10.019}>
 }
 %%\author{

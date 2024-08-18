@@ -10,7 +10,7 @@ Produces fragility index or fragility quotient for altering statistical signific
 frag.ma.alpha(e0, n0, e1, n1, data, measure = "OR",
               alpha.from = 0.005, alpha.to = 0.05, alpha.breaks = 100,
               mod.dir = "both", OR = 1, RR = 1, RD = 0,
-              method = "DL", test = "z", ...)
+              method = "DL", test = "z", drop00 = FALSE, ...)
 }
 \arguments{
   \item{e0}{a numeric vector or the corresponding column name in the argument \code{data}, indicating event counts in group 0 among the studies in the meta-analysis.}
@@ -28,6 +28,7 @@ frag.ma.alpha(e0, n0, e1, n1, data, measure = "OR",
   \item{RD}{a numeric value between \eqn{-}1 indicating the value of risk difference under the null hypothesis (the default is 0). It is used only if the argument \code{measure} is \code{"RD"}.}
   \item{method}{a character string specifying the method for performing meta-analysis. It is the same with the argument in \code{\link{frag.ma}}, and is passed to \code{\link[metafor]{rma.uni}}. See details in the manual of the package \CRANpkg{metafor}.}
   \item{test}{a character string specifying how confidence intervals are derived. It is the same with the argument in \code{\link{frag.ma}}, and is passed to \code{\link[metafor]{rma.uni}}. See details in the manual of the package \CRANpkg{metafor}.}
+  \item{drop00}{a logical value indicating whether studies with no events (or only events) in both groups should be dropped when calculating the observed effect sizes or outcomes. It is passed to \code{\link[metafor]{rma.uni}}.}
   \item{\dots}{other arguments that can be passed to \code{\link[metafor]{rma.uni}}. See details in the manual of the package \CRANpkg{metafor}.}
 }
 %%\details{

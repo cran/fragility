@@ -1,7 +1,7 @@
 frag.ma.alpha <- function(e0, n0, e1, n1, data, measure = "OR",
   alpha.from = 0.005, alpha.to = 0.05, alpha.breaks = 100,
   mod.dir = "both", OR = 1, RR = 1, RD = 0,
-  method = "DL", test = "z", ...){
+  method = "DL", test = "z", drop00 = FALSE, ...){
   if(!missing(data)){
     e0 <- eval(substitute(e0), data, parent.frame())
     n0 <- eval(substitute(n0), data, parent.frame())
@@ -62,8 +62,17 @@ frag.ma.alpha <- function(e0, n0, e1, n1, data, measure = "OR",
   alphas <- seq(from = alpha.from, to = alpha.to,
     length.out = alpha.breaks)
 
-  rslt.ori <- rma.uni(ai = e1, bi = ne1, ci = e0, di = ne0,
-    measure = measure, level = 95, method = method, test = test, ...)
+  dz.ori <- FALSE
+  if(drop00 & all((e1 == 0 & e0 == 0) | (ne1 == 0 & ne0 == 0))){
+    dz.ori <- TRUE
+  }
+  if(dz.ori){
+    rslt.ori <- data.frame(beta = 0, se = Inf, pval = 1, test = test)
+  }else{
+    rslt.ori <- rma.uni(ai = e1, bi = ne1, ci = e0, di = ne0,
+      measure = measure, level = 95,
+      method = method, test = test, drop00 = drop00, ...)
+  }
   est.ori <- as.numeric(rslt.ori$beta)
   se.ori <- rslt.ori$se
   pval.ori <- rslt.ori$pval
@@ -110,18 +119,40 @@ frag.ma.alpha <- function(e0, n0, e1, n1, data, measure = "OR",
           mod.temp <- rep(0, dim(data.temp)[1])
           if(grp.idx.temp[i] == 0){
             mod.temp[sids.temp[i]] <- ifelse(less, -1, 1)
-            out.temp <- rma.uni(ai = data.temp$e1, bi = data.temp$ne1,
-              ci = data.temp$e0 + mod.temp, di = data.temp$ne0 - mod.temp,
-              measure = measure, level = (1 - alphas.signif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1
+            bi.temp <- data.temp$ne1
+            ci.temp <- data.temp$e0 + mod.temp
+            di.temp <- data.temp$ne0 - mod.temp
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.signif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, ifelse(less, -1, 1))
             g1.mod.temp <- c(g1.mod.temp, 0)
           }else{
             mod.temp[sids.temp[i]] <- ifelse(less, 1, -1)
-            out.temp <- rma.uni(ai = data.temp$e1 + mod.temp, bi = data.temp$ne1 - mod.temp,
-              ci = data.temp$e0, di = data.temp$ne0,
-              measure = measure, level = (1 - alphas.signif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1 + mod.temp
+            bi.temp <- data.temp$ne1 - mod.temp
+            ci.temp <- data.temp$e0
+            di.temp <- data.temp$ne0
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.signif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, 0)
             g1.mod.temp <- c(g1.mod.temp, ifelse(less, 1, -1))
           }
@@ -185,18 +216,40 @@ frag.ma.alpha <- function(e0, n0, e1, n1, data, measure = "OR",
           mod.temp <- rep(0, dim(data.temp)[1])
           if(grp.idx.temp[i] == 0){
             mod.temp[sids.temp[i]] <- 1
-            out.temp <- rma.uni(ai = data.temp$e1, bi = data.temp$ne1,
-              ci = data.temp$e0 + mod.temp, di = data.temp$ne0 - mod.temp,
-              measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1
+            bi.temp <- data.temp$ne1
+            ci.temp <- data.temp$e0 + mod.temp
+            di.temp <- data.temp$ne0 - mod.temp
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, 1)
             g1.mod.temp <- c(g1.mod.temp, 0)
           }else{
             mod.temp[sids.temp[i]] <- -1
-            out.temp <- rma.uni(ai = data.temp$e1 + mod.temp, bi = data.temp$ne1 - mod.temp,
-              ci = data.temp$e0, di = data.temp$ne0,
-              measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1 + mod.temp
+            bi.temp <- data.temp$ne1 - mod.temp
+            ci.temp <- data.temp$e0
+            di.temp <- data.temp$ne0
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, 0)
             g1.mod.temp <- c(g1.mod.temp, -1)
           }
@@ -249,18 +302,40 @@ frag.ma.alpha <- function(e0, n0, e1, n1, data, measure = "OR",
           mod.temp <- rep(0, dim(data.temp)[1])
           if(grp.idx.temp[i] == 0){
             mod.temp[sids.temp[i]] <- -1
-            out.temp <- rma.uni(ai = data.temp$e1, bi = data.temp$ne1,
-              ci = data.temp$e0 + mod.temp, di = data.temp$ne0 - mod.temp,
-              measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1
+            bi.temp <- data.temp$ne1
+            ci.temp <- data.temp$e0 + mod.temp
+            di.temp <- data.temp$ne0 - mod.temp
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, -1)
             g1.mod.temp <- c(g1.mod.temp, 0)
           }else{
             mod.temp[sids.temp[i]] <- 1
-            out.temp <- rma.uni(ai = data.temp$e1 + mod.temp, bi = data.temp$ne1 - mod.temp,
-              ci = data.temp$e0, di = data.temp$ne0,
-              measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
-              method = method, test = test, ...)
+            ai.temp <- data.temp$e1 + mod.temp
+            bi.temp <- data.temp$ne1 - mod.temp
+            ci.temp <- data.temp$e0
+            di.temp <- data.temp$ne0
+            dz.temp <- FALSE
+            if(drop00 & all((ai.temp == 0 & ci.temp == 0) | (bi.temp == 0 & di.temp == 0))){
+              dz.temp <- TRUE
+            }
+            if(dz.temp){
+              out.temp <- data.frame(beta = 0, ci.lb = -Inf, ci.ub = Inf)
+            }else{
+              out.temp <- rma.uni(ai = ai.temp, bi = bi.temp, ci = ci.temp, di = di.temp,
+                measure = measure, level = (1 - alphas.nonsignif[a]) * 100,
+                method = method, test = test, drop00 = drop00, ...)
+            }
             g0.mod.temp <- c(g0.mod.temp, 0)
             g1.mod.temp <- c(g1.mod.temp, 1)
           }
