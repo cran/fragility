@@ -1,10 +1,10 @@
-dfccffb566457b967afbc85902be98ab *DESCRIPTION
-eda17e85db6f9147ed9af41c4fd6f295 *NAMESPACE
+c50620bba43c47e2917be081f10712b5 *DESCRIPTION
+eaa122c1885df44ec07637b54438db84 *NAMESPACE
 13ba89610319649deae622151917eb93 *R/frag.ma.R
 eb402fc84a152666e0974fa122d591a5 *R/frag.ma.alpha.R
 2ab02169c54f881a49574459da6f2280 *R/frag.mas.R
-1b9d99f713b49802202a9a2740df413d *R/frag.nma.R
-0ac8d919a48bec91406db3d93d6969c7 *R/frag.nma.alpha.R
+72a6ba737fe7a491289f6c30e4c9d9c8 *R/frag.nma.R
+e0598b3c3ce42e43d2bba42f55f22e72 *R/frag.nma.alpha.R
 efb91b0aeea6c4032bc4094d57bd727a *R/frag.studies.R
 ec8dd65ccfa97a29d763a6fde63f8c50 *R/frag.study.R
 f5b250d4f5bc1fbdac5ebc02b245dc30 *R/frag.study.all.R
@@ -26,7 +26,7 @@ c0569affd833cff44b52c508cbe9ed3b *R/print.frag.study.alpha.R
 ad6e2592af18a8296de57a68a09f0337 *R/pval.RD.R
 b7792fddb9503840e499d0ea2f4043d2 *R/pval.logOR.R
 c2b1cec1d8d054aef58c9f3144645929 *R/pval.logRR.R
-42255816ef4f7b814675d3a89662c00c *build/partial.rdb
+1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
 b4a6474faffec02dd7e959576edd4662 *data/dat.ad.rda
 91dc5af53ea9f0eeadded171b38b8a87 *data/dat.copd.rda
 b0a765946f6e9ed1fb73dd83b45eecdc *data/dat.ns.rda

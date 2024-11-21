@@ -1,7 +1,9 @@
 export(frag.ma, frag.ma.alpha, frag.mas, frag.nma, frag.nma.alpha, frag.studies, frag.study.alpha, frag.study)
 
-import(metafor, netmeta, graphics, grDevices, stats)
+import(metafor, graphics, grDevices, stats)
 importFrom(plotrix, axis.break)
+importFrom(meta, pairwise)
+importFrom(netmeta, netmeta)
 
 S3method(plot, frag.alpha)
 S3method(plot, frag.ma)

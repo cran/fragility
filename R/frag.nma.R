@@ -46,7 +46,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
   if(measure == "RR") null.val <- log(RR)
   if(measure == "RD") null.val <- RD
 
-  pmeta.ori <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = ori.data, sm = measure,
+  pmeta.ori <- meta::pairwise(treat = tid, event = e, n = n, studlab = sid, data = ori.data, sm = measure,
     incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
   rslt.ori <- netmeta(TE = pmeta.ori$TE, seTE = pmeta.ori$seTE, treat1 = pmeta.ori$treat1, treat2 = pmeta.ori$treat2, studlab = pmeta.ori$studlab,
     sm = measure, level.ma = 1 - alpha, ...)
@@ -178,7 +178,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
             tid1.mod.temp <- c(tid1.mod.temp, 0)
             tid2.mod.temp <- c(tid2.mod.temp, ifelse(less, -1, 1))
           }
-          pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
+          pmeta.temp <- meta::pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
             incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
           out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
             sm = measure, level.ma = 1 - alpha, ...)
@@ -258,7 +258,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
               tid1.mod.temp <- c(tid1.mod.temp, 0)
               tid2.mod.temp <- c(tid2.mod.temp, 1)
             }
-            pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
+            pmeta.temp <- meta::pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
               incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
             out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
               sm = measure, level.ma = 1 - alpha, ...)
@@ -333,7 +333,7 @@ frag.nma <- function(sid, tid, e, n, data, measure = "OR", random = TRUE,
               tid1.mod.temp <- c(tid1.mod.temp, 0)
               tid2.mod.temp <- c(tid2.mod.temp, -1)
             }
-            pmeta.temp <- pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
+            pmeta.temp <- meta::pairwise(treat = tid, event = e, n = n, studlab = sid, data = data.tt[[i]], sm = measure,
               incr = incr, allincr = allincr, addincr = addincr, allstudies = allstudies)
             out.temp <- netmeta(TE = pmeta.temp$TE, seTE = pmeta.temp$seTE, treat1 = pmeta.temp$treat1, treat2 = pmeta.temp$treat2, studlab = pmeta.temp$studlab,
               sm = measure, level.ma = 1 - alpha, ...)
