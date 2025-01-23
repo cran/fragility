@@ -18,9 +18,9 @@ Visualizes the fragility of an individual study with a binary outcome.
   \item{method}{a character string (\code{"Fisher"}, \code{"chisq"}, \code{"OR"}, \code{"RR"}, or \code{"RD"}) indicating the method used to calculate the p-value. It must be an element of \code{x$methods}; the default is the first method in \code{x$methods}.}
   \item{modify0}{a logical value indicating whether event status is modified in group 0 for plotting. The default is \code{TRUE} if the range of event status modifications stored in the object \code{x} (\code{x$f0.range}) is not 0; otherwise, the default is \code{FALSE}.}
   \item{modify1}{a logical value indicating whether event status is modified in group 1 for plotting. The default is \code{TRUE} if the range of event status modifications stored in the object \code{x} (\code{x$f1.range}) is not 0; otherwise, the default is \code{FALSE}.}
-  \item{trun}{a positive numeric value indicating truncation of p-value (on a base-10 logarithmic scale); p-values smaller than this threshold (10^\code{-trun}) are truncated. The default is 10.}
-  \item{xlab}{a label for the x axis.}
-  \item{ylab}{a label for the y axis.}
+  \item{trun}{a positive numeric value indicating truncation of the p-value (on a base-10 logarithmic scale); p-values smaller than this threshold (10^\code{-trun}) are truncated. The default is 10.}
+  \item{xlab}{a label for the x-axis.}
+  \item{ylab}{a label for the y-axis.}
   \item{xlim}{the x limits \code{c(x1, x2)} of the plot.}
   \item{ylim}{the y limits \code{c(y1, y2)} of the plot.}
   \item{cex.pts}{the size of points in the plot (the default is 0.5).}
@@ -44,7 +44,7 @@ Visualizes the fragility of an individual study with a binary outcome.
   \item{\dots}{other arguments that can be passed to \code{\link[graphics]{plot.default}}.}
 }
 \details{
-When both arguments \code{modify0} and \code{modify1} are \code{TRUE}, the generated plot presents p-values (with different colors representing their magnitudes) based on all possible event status modifications. The modifications in group 0 are presented on the x axis, and those in group 1 are presented on the y axis. When only one of the arguments \code{modify0} and \code{modify1} is \code{TRUE}, a scatter plot is generated, which presents p-values (on a base-10 logarithmic scale) on the y axis against event status modifications in group 0 (if \code{modify0} = \code{TRUE}) or group 1 (if \code{modify1} = \code{TRUE}) on the x axis.
+When both arguments \code{modify0} and \code{modify1} are \code{TRUE}, the generated plot presents p-values (with different colors representing their magnitudes) based on all possible event status modifications. The modifications in group 0 are presented on the x-axis, and those in group 1 are presented on the y-axis. When only one of the arguments \code{modify0} and \code{modify1} is \code{TRUE}, a scatter plot is generated, which presents p-values (on a base-10 logarithmic scale) on the y-axis against event status modifications in group 0 (if \code{modify0} = \code{TRUE}) or group 1 (if \code{modify1} = \code{TRUE}) on the x-axis.
 }
 \value{
 None.

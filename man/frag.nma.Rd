@@ -1,7 +1,7 @@
 \name{frag.nma}
 \alias{frag.nma}
 \title{
-Assessing Fragility of a Network Meta-Analysis With a Binary Outcome
+Assessing the Fragility of a Network Meta-Analysis With a Binary Outcome
 }
 \description{
 Produces results, such as fragility index, fragility quotient, and event status modifications for altering statistical significance, of treatment comparison(s) in a network meta-analysis with a binary outcome.
@@ -26,10 +26,10 @@ frag.nma(sid, tid, e, n, data, measure = "OR", random = TRUE, alpha = 0.05,
   \item{OR}{a numeric positive value indicating the value of odds ratio under the null hypothesis (the default is 1). It is used only if the argument \code{measure} is \code{"OR"}.}
   \item{RR}{a numeric positive value indicating the value of relative risk under the null hypothesis (the default is 1). It is used only if the argument \code{measure} is \code{"RR"}.}
   \item{RD}{a numeric value between \eqn{-}1 indicating the value of risk difference under the null hypothesis (the default is 0). It is used only if the argument \code{measure} is \code{"RD"}.}
-  \item{incr}{A numerical value which is added to each cell frequency for studies with a zero cell count. It is passed to the function \code{\link[netmeta]{pairwise}} in the package \CRANpkg{netmeta}.}
-  \item{allincr}{A logical value indicating whether \code{incr} is added to each cell frequency of all studies if at least one study has a zero cell count. If \code{FALSE} (the default), \code{incr} is added only to each cell frequency of studies with a zero cell count. It is passed to the function \code{\link[netmeta]{pairwise}} in the package \CRANpkg{netmeta}.}
-  \item{addincr}{A logical value indicating whether \code{incr} is added to each cell frequency of all studies irrespective of zero cell counts (the default is \code{FALSE}). It is passed to the function \code{\link[netmeta]{pairwise}} in the package \CRANpkg{netmeta}.}
-  \item{allstudies}{A logical value indicating whether studies with zero or all events in two treatment groups are to be included in the network meta-analysis (the default is \code{FALSE}). It is used only for \code{measure} = \code{"OR"} and \code{"RR"}. It is passed to the function \code{\link[netmeta]{pairwise}} in the package \CRANpkg{netmeta}.}
+  \item{incr}{A numerical value that is added to each cell frequency for studies with a zero cell count. It is passed to the function \code{\link[meta]{pairwise}} in the package \CRANpkg{meta}.}
+  \item{allincr}{A logical value indicating whether \code{incr} is added to each cell frequency of all studies if at least one study has a zero cell count. If \code{FALSE} (the default), \code{incr} is added only to each cell frequency of studies with a zero cell count. It is passed to the function \code{\link[meta]{pairwise}} in the package \CRANpkg{meta}.}
+  \item{addincr}{A logical value indicating whether \code{incr} is added to each cell frequency of all studies irrespective of zero cell counts (the default is \code{FALSE}). It is passed to the function \code{\link[meta]{pairwise}} in the package \CRANpkg{meta}.}
+  \item{allstudies}{A logical value indicating whether studies with zero or all events in two treatment groups are to be included in the network meta-analysis (the default is \code{FALSE}). It is used only for \code{measure} = \code{"OR"} and \code{"RR"}. It is passed to the function \code{\link[meta]{pairwise}} in the package \CRANpkg{meta}.}
   \item{\dots}{other arguments that can be passed to \code{\link[netmeta]{netmeta}}. See details in the manual of the package \CRANpkg{netmeta}.}
 }
 %%\details{

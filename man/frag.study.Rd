@@ -1,10 +1,10 @@
 \name{frag.study}
 \alias{frag.study}
 \title{
-Assessing Fragility of an Individual Study With a Binary Outcome
+Assessing the Fragility of an Individual Study With a Binary Outcome
 }
 \description{
-Produces results, such as fragility index, fragility quotient, and event status modifications for altering statistical significance, of an individual study with a binary outcome.
+Produces results, such as fragility index, fragility quotient, and event status modifications, for altering the statistical significance of an individual study with a binary outcome.
 }
 \usage{
 frag.study(e0, n0, e1, n1, data, all = FALSE, methods,
@@ -19,7 +19,7 @@ frag.study(e0, n0, e1, n1, data, all = FALSE, methods,
   \item{n1}{a numeric value or the corresponding column name in the argument \code{data}, indicating sample size in group 1.}
   \item{data}{an optional data frame containing the dataset of the individual study with a binary outcome. If \code{data} is specified, the previous arguments, \code{e0}, \code{n0}, \code{e1}, and \code{n1}, should be specified as their corresponding column names in \code{data}.}
   \item{all}{a logical value indicating whether all eligible event status modifications will be considered (the default is \code{FALSE}).}
-  \item{methods}{a character string or a vector of character strings indicating the method(s) used to calculate the p-value(s) of the association between treatment and outcome. It must consist of \code{"Fisher"} (Fisher's exact test), \code{"chisq"} (chi-squared test), \code{"OR"} (odds ratio), \code{"RR"} (relative risk), and/or \code{"RD"} (risk difference). The default is the vector consisting of all aforementioned five methods.}
+  \item{methods}{a character string or a vector of character strings indicating the method(s) used to calculate the p-value(s) of the association between treatment and outcome. It must consist of \code{"Fisher"} (Fisher's exact test), \code{"chisq"} (chi-squared test), \code{"OR"} (odds ratio), \code{"RR"} (relative risk), and/or \code{"RD"} (risk difference). The default is the vector consisting of all the aforementioned five methods.}
   \item{modify0}{a character string indicating the event status modifications in group 0. It should be one of \code{"increase"} (increasing event numbers), \code{"decrease"} (decreasing event numbers), \code{"both"} (the default, modifying event numbers in both directions), and \code{"none"} (no modification).}
   \item{modify1}{a character string indicating the event status modifications in group 1. It has the same usage with \code{modify0}, with the default being \code{"both"}.}
   \item{alpha}{a numeric value between 0 and 1, indicating the statistical significance level (the default is 0.05).}

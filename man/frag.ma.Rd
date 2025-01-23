@@ -1,10 +1,10 @@
 \name{frag.ma}
 \alias{frag.ma}
 \title{
-Assessing Fragility of a Meta-Analysis With a Binary Outcome
+Assessing the Fragility of a Meta-Analysis With a Binary Outcome
 }
 \description{
-Produces results, such as fragility index, fragility quotient, and event status modifications for altering statistical significance, of a meta-analysis with a binary outcome.
+Produces results, such as fragility index, fragility quotient, and event status modifications, for altering the statistical significance of a meta-analysis with a binary outcome.
 }
 \usage{
 frag.ma(e0, n0, e1, n1, data, measure = "OR", alpha = 0.05,
@@ -57,6 +57,8 @@ Atal I, Porcher R, Boutron I, Ravaud P (2019). "The statistical significance of 
 Lin L, Chu H (2022). "Assessing and visualizing fragility of clinical results with binary outcomes in R using the fragility package." \emph{PLOS ONE}, \bold{17}(6), e0268754. <\doi{10.1371/journal.pone.0268754}>
 
 Lin L, Xing A, Chu H, Murad MH, Xu C, Baer BR, Wells MT, Sanchez-Ramos L (2023). "Assessing the robustness of results from clinical trials and meta-analyses with the fragility index." \emph{American Journal of Obstetrics and Gynecology}, \bold{228}(3), 276--282. <\doi{10.1016/j.ajog.2022.08.053}>
+
+Wang Z, Xing X, Mun EY, Wu C, Lin L (2025). "The role of double-zero-event studies in evidence synthesis: Evaluating robustness using the fragility index." \emph{Journal of Evaluation in Clinical Practice}, \bold{31}(1), e14301. <\doi{10.1111/jep.14301}>
 }
 %%\author{
 %%  ~~who you are~~

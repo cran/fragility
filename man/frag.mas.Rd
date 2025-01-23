@@ -1,10 +1,10 @@
 \name{frag.mas}
 \alias{frag.mas}
 \title{
-Assessing Fragility of Multiple Meta-Analyses With Binary Outcomes
+Assessing the Fragility of Multiple Meta-Analyses With Binary Outcomes
 }
 \description{
-Produces fragility indexes or fragility quotients for altering statistical significance of multiple meta-analyses with binary outcomes.
+Produces fragility indexes or fragility quotients for altering the statistical significance of multiple meta-analyses with binary outcomes.
 }
 \usage{
 frag.mas(e0, n0, e1, n1, ma.id, data, measure = "OR", alpha = 0.05,

@@ -1,10 +1,10 @@
 \name{frag.ma.alpha}
 \alias{frag.ma.alpha}
 \title{
-Assessing Fragility of a Meta-Analysis at Different Significance Levels
+Assessing the Fragility of a Meta-Analysis at Different Significance Levels
 }
 \description{
-Produces fragility index or fragility quotient for altering statistical significance of a meta-analysis with a binary outcome at different significance levels.
+Produces fragility index or fragility quotient for altering the statistical significance of a meta-analysis with a binary outcome at different significance levels.
 }
 \usage{
 frag.ma.alpha(e0, n0, e1, n1, data, measure = "OR",

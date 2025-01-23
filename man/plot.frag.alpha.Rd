@@ -16,8 +16,8 @@ Visualizes the fragility at different statistical significance levels.
   \item{method}{a character string indicating the method used to calculate the p-value when \code{x} is of class \code{"frag.study.alpha"} produced by \code{\link{frag.study.alpha}}. It must be an element of \code{x$methods}; the default is the first method in \code{x$methods}.}
   \item{fragility}{a character string of either \code{"FI"} (fragility index, the default) or \code{"FQ"} (fragility quotient), indicating which fragility measure will be presented in the plot.}
   \item{percentage}{a logical value indicating whether the fragility quotient is presented in percentage (\code{TRUE}, the default) or not (\code{FALSE}). It is only used when the argument \code{fragility} = \code{"FQ"}.}
-  \item{xlab}{a label for the x axis.}
-  \item{ylab}{a label for the y axis.}
+  \item{xlab}{a label for the x-axis.}
+  \item{ylab}{a label for the y-axis.}
   \item{xlim}{the x limits \code{c(x1, x2)} of the plot.}
   \item{ylim}{the y limits \code{c(y1, y2)} of the plot.}
   \item{cex.pts}{the size of points in the plot (the default is 0.5).}
@@ -28,14 +28,14 @@ Visualizes the fragility at different statistical significance levels.
   \item{lwd}{the width of the line segments that join the points (the default is 1).}
   \item{lwd.pval}{the width of the vertical line depicting the p-value of the original data. The default is 1. It is only used when the p-value is between the lower and upper limits of the considered significance levels.}
   \item{pch}{the symbol of points in the plot. The default is 16 (filled circle).}
-  \item{pch.na}{the symbol of points depicting fragility index/quotient = \code{NA} (if any, in cases that significance or non-significance cannot be altered). The default is 1 (unfilled circle).}
+  \item{pch.na}{the symbol of points depicting fragility index/quotient = \code{NA} (if any, in cases where significance or non-significance cannot be altered). The default is 1 (unfilled circle).}
   \item{tid1}{the first treatment of the comparison of interest; if not specified, the first comparison in \code{x$tid.f} will be used. It is only used when \code{x} is of class \code{"frag.nma.alpha"} for a network meta-analysis.}
   \item{tid2}{the second treatment of the comparison of interest. Only one comparison can be specified by \code{tid1} and \code{tid2} at one time for plotting. It is only used when \code{x} is of class \code{"frag.nma.alpha"}.}
   \item{FQ.nma}{a logical value indicating whether the fragility quotient in a network meta-analysis is the total sample size associated with the specific treatment comparison (\code{FALSE}, the default) or the total sample size in the whole network meta-analysis across all treatment groups (\code{TRUE}). It is only used when \code{x} is of class \code{"frag.nma.alpha"}.}
   \item{\dots}{other arguments that can be passed to \code{\link[graphics]{plot.default}}.}
 }
 \details{
-A scatter plot is generated, where the x axis presents the different significance levels, and the y axis presents the corresponding fragility indexes or fragility quotients.
+A scatter plot is generated, where the x-axis presents the different significance levels, and the y-axis presents the corresponding fragility indexes or fragility quotients.
 }
 \value{
 None.

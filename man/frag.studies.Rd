@@ -1,10 +1,10 @@
 \name{frag.studies}
 \alias{frag.studies}
 \title{
-Assessing Fragility of Multiple Individual Studies With Binary Outcomes
+Assessing the Fragility of Multiple Individual Studies With Binary Outcomes
 }
 \description{
-Produces fragility indexes or fragility quotients for altering statistical significance of multiple individual studies with binary outcomes.
+Produces fragility indexes or fragility quotients for altering the statistical significance of multiple individual studies with binary outcomes.
 }
 \usage{
 frag.studies(e0, n0, e1, n1, data, methods,
@@ -17,7 +17,7 @@ frag.studies(e0, n0, e1, n1, data, methods,
   \item{e1}{a numeric vector or the corresponding column name in the argument \code{data}, indicating event counts in multiple studies' group 1.}
   \item{n1}{a numeric vector or the corresponding column name in the argument \code{data}, indicating sample sizes in multiple studies' group 1.}
   \item{data}{an optional data frame containing the dataset of multiple individual studies with binary outcomes. If \code{data} is specified, the previous arguments, \code{e0}, \code{n0}, \code{e1}, and \code{n1}, should be specified as their corresponding column names in \code{data}.}
-  \item{methods}{a character string or a vector of character strings indicating the method(s) used to calculate the p-value(s) of the association between treatment and outcome. It must consist of \code{"Fisher"} (Fisher's exact test), \code{"chisq"} (chi-squared test), \code{"OR"} (odds ratio), \code{"RR"} (relative risk), and/or \code{"RD"} (risk difference). The default is the vector consisting of all aforementioned five methods.}
+  \item{methods}{a character string or a vector of character strings indicating the method(s) used to calculate the p-value(s) of the association between treatment and outcome. It must consist of \code{"Fisher"} (Fisher's exact test), \code{"chisq"} (chi-squared test), \code{"OR"} (odds ratio), \code{"RR"} (relative risk), and/or \code{"RD"} (risk difference). The default is the vector consisting of all the aforementioned five methods.}
   \item{modify0}{a character string indicating the event status modifications in group 0. It should be one of \code{"increase"} (increasing event numbers), \code{"decrease"} (decreasing event numbers), \code{"both"} (the default, modifying event numbers in both directions), and \code{"none"} (no modification).}
   \item{modify1}{a character string indicating the event status modifications in group 1. It has the same usage with \code{modify0}, with the default being \code{"both"}.}
   \item{alpha}{a numeric value between 0 and 1, indicating the statistical significance level (the default is 0.05).}
